@@ -28,6 +28,7 @@ export class MenuLitElement extends LitElement {
     TODO
       value and DisplayValue
       subMenu display animation delay
+      styleMap
     */
 
     this.rootMenu = [
@@ -207,9 +208,9 @@ export class MenuLitElement extends LitElement {
 
     this.menu = this.rootMenu.find((menuItem) =>
       menuItem.text === text).menu;
-
-     // Manually start on update   
+     
     await this.requestUpdate();
+
     this.positionMenu(
       this.shadowRoot.querySelector('.menu'),
       this.menuOrigin(this.currentRootMenuItem));
@@ -229,7 +230,6 @@ export class MenuLitElement extends LitElement {
     this.subMenu = this.menu.find((menuItem) =>
       menuItem.text === text).menu;
 
-    // Manually start on update       
     await this.requestUpdate();
     this.positionMenu(
       this.shadowRoot.querySelector('.subMenu'),
@@ -262,8 +262,8 @@ export class MenuLitElement extends LitElement {
       y: subMenuItem.offsetTop + 24
     };
   }
-
-  positionMenu(menuContainer, origin) {
+  
+  positionMenu(menuContainer, origin) {    
     menuContainer.style.left = `${origin.x}px`;
     menuContainer.style.top = `${origin.y}px`;
   }

@@ -1,6 +1,6 @@
-# start-lit-element
+# menu-lit-element
 
-A simple Hello World for LitElement.
+A Menu Web Component implemented with LitElement.
 
 https://start-lit-element.firebaseapp.com/
 
@@ -96,41 +96,3 @@ polymer serve build/default
 ```
 
 If you changed significant stuff (e.g. filenames, folder structure, installed other modules, etc), edit your polymer.json file to configure your build correctly. See the [Polymer CLI documentation](https://www.polymer-project.org/3.0/docs/tools/polymer-json) for more info.
-
-### Deploy
-
-1.  [Set up Firebase CLI tools](https://firebase.google.com/docs/cli/).
-2.  [Create a new Firebase project](https://firebase.google.com/console).
-3.  Update firebase.json and .firebaserc with your own app details.   
-4.  Deploy.
-
-    ```
-    firebase deploy
-    ```
-
-See the [Firebase CLI Reference](https://firebase.google.com/docs/cli) for more info.
-
-## Browser compatibility and performance
-
-At the time of writing (Dec 11 2018) this app was scoring 100% on all Lighthouse audits when deployed, and was working fine on the most recent versions of Chrome, Safari, Firefox, and Edge.
-
-Let me know of any [issues](https://github.com/PolymerLabs/start-lit-element/issues).
-
-## Known issues
-
-(All browsers) Dynamic `import` warning:
-
-```
-Could not resolve module specifier "require" in file "..src/start-lit-element.js".
-```
-
-See https://github.com/Polymer/tools/issues/131.
-
-(IE11 and Edge) Warning due to `<!--!` in built HTML:
-
-```
-Unexpected character: U+0021 EXCLAMATION MARK (!)
-Unexpected character in comment end. Expected "-->"
-```
-
-See https://github.com/Polymer/polymer-cli/issues/779.
