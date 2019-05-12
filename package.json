@@ -9,6 +9,7 @@
   },
   "author": "Glen Kitchen <glen.kitchen@gmail.com>",
   "license": "BSD-3-Clause",
+  "keywords": ["web component", "LitElement", "lit-html", "JavaScript"], 
   "dependencies": {
     "@webcomponents/webcomponentsjs": "latest",
     "lit-element": "latest"

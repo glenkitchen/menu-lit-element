@@ -1,98 +1,60 @@
 # menu-lit-element
 
-A Menu Web Component implemented with LitElement.
+ MenuLitComponent is a dynamic, state-driven menu web component implemented as a [LitElement](https://lit-element.polymer-project.org/).
 
-https://start-lit-element.firebaseapp.com/
+* [Overview](#overview)
+* [Using MenuLitComponent](#using-menulitcomponent)
+* [Setup MenuLitComponent](#setup-menulitcomponent)
+* [Known Issues](#known-issues)
+* [Acknowledgements](#acknowledgements)
 
-* [Quick start](#quick-start)
-* [Detailed setup info](#detailed-setup-info)
-* [Browser compatibility and performance](#browser-compatibility-and-performance)
+## Overview
 
-## Quick start
+TODO Gif 
 
-```
-npm install -g polymer-cli
-git clone https://github.com/PolymerLabs/start-lit-element
-cd start-lit-element
-npm install
-polymer serve
-```
+TODO features 
+* dynamic
+* state-driven
 
-## Detailed setup info
+## Using MenuLitComponent
 
-* [Clone](#clone-this-repo)
-* [Serve](#start-a-dev-server)
-* [Setup](#set-up-new-app)
-* [Build](#build-for-production-and-serve-locally)
-* [Deploy](#deploy)
+To use MenuLitElement component in your code:
 
-### Clone this repo
+1. Install MenuLitElement from Npm 
 
 ```
-git clone https://github.com/PolymerLabs/start-lit-element
+npm install --save menu-lit-element.
 ```
 
-### Start a dev server
+2. Import MenuLitElement in JavaScript (or TypScript):
 
 ```
-npm install -g polymer-cli
-cd start-lit-element
-npm install
-polymer serve
+import { MenuLitElement} 'menu-lit-element';
 ```
 
-### Set up new app
-
-1. In index.html, update metadata stuff:
-
-```html
-<!-- Change stuff here for your app -->
-<meta name="description" content="start-lit-element">
-<meta name="theme-color" content="#ffffff">
-<title>start-lit-element</title>
-```
-
-2. In index.html, uncomment the service worker registration code:
-
-```html
-<!-- Register service worker if supported. -->
-<!--
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js');
-  }
-</script> -->
-```
-
-3. In manifest.json, update the app description, etc:
-
-```json
-"description": "start-lit-element",
-"start_url": "index.html",
-"name": "start-lit-element",
-"short_name": "start-lit-el",
-"background_color": "#ffffff",
-"theme_color":"#ffffff",
-```
-
-4. Update your package.json if required
-
-5. In polymer.json, update your shell & entrypoint if required
+3. Add the menu-lit-element tag to your application html or component html:
 
 ```
-"shell": "src/start-lit-element.js",
-"entrypoint": "index.html",
+<menu-lit-element></menu-lit-element>
 ```
 
-6. Remember to update firebase.json and .firebaserc for a real deployment!
+TODO no depencies just besides Lit Eleement, just copy menu-lit-element.js
 
-### Build for production and serve locally
+TODO es5 and es6
 
-Build your project and serve the build locally:
+## Setup MenuLitComponent
 
-```
-polymer build
-polymer serve build/default
-```
+TODO
+* properties
+* events 
 
-If you changed significant stuff (e.g. filenames, folder structure, installed other modules, etc), edit your polymer.json file to configure your build correctly. See the [Polymer CLI documentation](https://www.polymer-project.org/3.0/docs/tools/polymer-json) for more info.
+## Known Issues
+
+TODO
+Demo?
+
+## Acknowledgements
+
+* Based on the menu in the [mxGraph](https://github.com/jgraph/mxgraph) and the [Graph Editor](https://jgraph.github.io/mxgraph/javascript/examples/grapheditor/www/index.html) example application.
+* The project structure is based on the [start-lit-element](https://github.com/PolymerLabs/start-lit-element) sample LitElement project.
+* The project was built with version 3.0 of the [Polymer CLI](https://polymer-library.polymer-project.org/3.0/docs/tools/polymer-cli).     
