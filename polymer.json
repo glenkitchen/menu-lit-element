@@ -12,9 +12,10 @@
   ],
   "builds": [
     {
-      "preset": "es5-bundled",
-      "html": { "minify": false}, 
-      "addServiceWorker": false
+      "preset": "es5-bundled"
+    },
+    {
+      "preset": "es6-bundled"
     }
   ]
 }

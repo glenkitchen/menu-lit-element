@@ -54,7 +54,14 @@ export class MenuLitElement extends LitElement {
               [
                 { text: 'Left Align' },
                 { text: 'Center' },
-                { text: 'Right Align' }
+                {
+                  text: 'Right Align', men:
+                    [
+                      { text: 'One' },
+                      { text: 'Two' },
+                      { text: 'Three' }
+                    ]
+                }
               ]
           },
           { text: '-' },
@@ -101,14 +108,14 @@ export class MenuLitElement extends LitElement {
 
     const subMenuItem = (item) =>
       html`
-      <tr class="menuItem" ?disabled=${item.disabled} @mousemove=${this.subMenuItemMouseMove} @mouseleave=${this.subMenuItemMouseLeave}>
+      <tr class="menuItem" ?disabled=${item.disabled} @mousemove=${this.subMenuItemMouseMove}>
         ${text(item)}
         <td class="menuItemSubMenu"> </td>
       </tr>`;
 
     const textItem = (item) =>
       html`
-      <tr class="menuItem" ?disabled=${item.disabled} @click=${this.menuItemClick}>
+      <tr class="menuItem" ?disabled=${item.disabled} @mousedown=${this.menuItemMouseDown} @mousemove=${this.menuItemMouseMove}>
         ${text(item)}
         <td class="shortCutText">${item.shortCutText}</td>
       </tr>`;
@@ -201,52 +208,85 @@ export class MenuLitElement extends LitElement {
     `;
   }
 
-  async rootMenuItemMouseDown(event) {
-    this.currentRootMenuItem = event.currentTarget;
-
-    const text = this.currentRootMenuItem.text.trim();
-
-    this.menu = this.rootMenu.find((menuItem) =>
-      menuItem.text === text).menu;
-     
-    await this.requestUpdate();
-
-    this.positionMenu(
-      this.shadowRoot.querySelector('.menu'),
-      this.menuOrigin(this.currentRootMenuItem));
+  rootMenuItemMouseDown(event) {
+    this.showMenu(event);
   }
 
   rootMenuItemMouseMove(event) {
     if (this.currentRootMenuItem && this.currentRootMenuItem !== event.currentTarget) {
-      this.rootMenuItemMouseDown(event);
+      this.showMenu(event);
     }
   }
 
-  async subMenuItemMouseMove(event) {
-    this.currentSubMenuItem = event.currentTarget;
-
-    const text = this.currentSubMenuItem.firstElementChild.textContent.trim();
-
-    this.subMenu = this.menu.find((menuItem) =>
-      menuItem.text === text).menu;
-
-    await this.requestUpdate();
-    this.positionMenu(
-      this.shadowRoot.querySelector('.subMenu'),
-      this.subMenuOrigin(this.currentRootMenuItem, this.currentSubMenuItem));
-  }
-
-  subMenuItemMouseLeave() {
-    this.subMenu = null;
-    this.currentSubMenuItem = null;
-  }
-
-  menuItemClick(event) {    
+  menuItemMouseDown(event) {
     this.currentMenuItem = event.currentTarget;
     if (!this.currentMenuItem.attributes.disabled) {
       alert(this.currentMenuItem.textContent.trim());
-      this.closeMenu();      
+      this.closeMenu();
     }
+  }
+
+  menuItemMouseMove(event) {
+    if (!this.inSubMenu(event.currentTarget)) {
+      this.closeSubMenu();
+    }
+  }
+
+  subMenuItemMouseMove(event) {
+    this.showSubMenu(event);
+  }
+
+  async showMenu(event) {
+    this.closeMenu();
+
+    this.currentRootMenuItem = event.currentTarget;
+
+    const text = this.currentRootMenuItem.text.trim();
+
+    const menuItem = this.rootMenu.find((menuItem) =>
+      menuItem.text === text);
+
+    if (menuItem) {
+      this.menu = menuItem.menu;
+    }
+
+    if (this.menu) {
+      await this.requestUpdate();
+
+      this.positionMenu(
+        this.shadowRoot.querySelector('.menu'),
+        this.menuOrigin(this.currentRootMenuItem));
+    }
+  }
+
+  async showSubMenu(event) {
+    if (this.currentSubMenuItem !== event.currentTarget) {
+      this.closeSubMenu();
+      this.currentSubMenuItem = event.currentTarget;
+
+      const text = this.currentSubMenuItem.firstElementChild.textContent.trim();
+
+      const subMenuItem = this.menu.find((menuItem) =>
+        menuItem.text === text);
+
+
+      if (subMenuItem) {
+        this.subMenu = subMenuItem.menu;
+      }
+
+      if (this.subMenu) {
+        await this.requestUpdate();
+
+        this.positionMenu(
+          this.shadowRoot.querySelector('.subMenu'),
+          this.subMenuOrigin(this.currentRootMenuItem, this.currentSubMenuItem));
+      }
+
+    }
+  }
+
+  inSubMenu(menuItem) {
+    return menuItem.parentElement.parentElement.classList.contains("subMenu");
   }
 
   menuOrigin(rootMenuItem) {
@@ -262,8 +302,8 @@ export class MenuLitElement extends LitElement {
       y: subMenuItem.offsetTop + 24
     };
   }
-  
-  positionMenu(menuContainer, origin) {    
+
+  positionMenu(menuContainer, origin) {
     menuContainer.style.left = `${origin.x}px`;
     menuContainer.style.top = `${origin.y}px`;
   }
@@ -273,6 +313,11 @@ export class MenuLitElement extends LitElement {
     this.subMenu = null;
     this.currentRootMenuItem = null;
     this.currentMenuItem = null;
+    this.currentSubMenuItem = null;
+  }
+
+  closeSubMenu() {
+    this.subMenu = null;
     this.currentSubMenuItem = null;
   }
 }
