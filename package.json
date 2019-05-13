@@ -4,6 +4,7 @@
   "description": "menu-lit-element",
   "repository": "https://github.com/glenkitchen/menu-lit-element",
   "main": "menu-lit-element.js",
+  "module": "menu-lit-element.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

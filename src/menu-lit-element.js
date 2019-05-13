@@ -14,6 +14,9 @@ export class MenuLitElement extends LitElement {
     /* TODO 
 
     NPM 
+      install 
+      import 
+      add
 
     angular-assembly  
       state action, checked, disabled             
@@ -29,6 +32,7 @@ export class MenuLitElement extends LitElement {
       value and DisplayValue
       subMenu display animation delay
       styleMap
+      cursor      
     */
 
     this.rootMenu = [
@@ -54,14 +58,26 @@ export class MenuLitElement extends LitElement {
               [
                 { text: 'Left Align' },
                 { text: 'Center' },
-                {
-                  text: 'Right Align', men:
-                    [
-                      { text: 'One' },
-                      { text: 'Two' },
-                      { text: 'Three' }
-                    ]
-                }
+                { text: 'Right Align' },
+                { text: '-' },
+                { text: 'Top Align' },
+                { text: 'Middle' },
+                { text: 'Bottom Align' },
+              ]
+          },
+          {
+            text: 'Distribute', menu:
+              [
+                { text: 'Horizontal' },
+                { text: 'Vertical' },
+              ]
+          },
+          { text: '-' },
+          {
+            text: 'Navigation', menu:
+              [
+                { text: 'Expand', shortCutText: 'Ctrl+End' },
+                { text: 'Collapse', shortCutText: 'Ctrl+Home' },
               ]
           },
           { text: '-' },

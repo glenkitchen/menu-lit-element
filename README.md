@@ -1,8 +1,8 @@
 # menu-lit-element
 
- MenuLitComponent  is an application menu web component implemented as a [LitElement](https://lit-element.polymer-project.org/).
-
- It is configuration-driven and state-driven.
+ MenuLitComponent is an application menu web component. 
+ 
+ It is implemented as a [LitElement](https://lit-element.polymer-project.org/) and is configuration-driven and state-driven.
 
 * [Overview](#overview)
 * [Using MenuLitComponent](#using-menulitcomponent)
@@ -31,7 +31,7 @@ To use the MenuLitElement component in your code:
 npm install --save menu-lit-element.
 ```
 
-2. Import MenuLitElement in JavaScript (or TypsScript):
+2. Import MenuLitElement in JavaScript (or TypeScript):
 
 ```
 import { MenuLitElement} 'menu-lit-element';
@@ -43,7 +43,7 @@ import { MenuLitElement} 'menu-lit-element';
 <menu-lit-element></menu-lit-element>
 ```
 
-TOO To use the MenuLitElement component in a 
+TOO Angular
 TODO es5 and es6
 
 ## Setup MenuLitComponent
@@ -58,6 +58,6 @@ TODO
 
 ## Acknowledgements
 
-* MenuLitElement is based on the menu in [mxGraph](https://github.com/jgraph/mxgraph) and the accompanying [Graph Editor](https://jgraph.github.io/mxgraph/javascript/examples/grapheditor/www/index.html) example application.
+* MenuLitElement is based on the application menu in [mxGraph](https://github.com/jgraph/mxgraph) and the accompanying [Graph Editor](https://jgraph.github.io/mxgraph/javascript/examples/grapheditor/www/index.html) example application.
 * The project structure is based on the [start-lit-element](https://github.com/PolymerLabs/start-lit-element) sample LitElement project.
 * This project is built with version 3.0 of the [Polymer CLI](https://polymer-library.polymer-project.org/3.0/docs/tools/polymer-cli).     
