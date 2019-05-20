@@ -4,20 +4,17 @@
   "npm": true,
   "moduleResolution": "node",
   "sources": [
-    "src/menu-lit-element.js",
-    "package.json"
+    "src/menu-lit-element.js"
   ],
   "extraDependencies": [
     "node_modules/@webcomponents/webcomponentsjs/**"
   ],
   "builds": [
     {
-      "preset": "es5-bundled",
-      "js": { "minify": false}        
+      "preset": "es5-bundled" 
     },
     {
-      "preset": "es6-bundled",
-      "js": { "minify": false}        
+      "preset": "es6-bundled"        
     }
   ]
 }

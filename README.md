@@ -21,8 +21,10 @@ TODO features
 * toggle items
 * shortcut text
 
-## Using MenuLitComponent
+TODO Demo
+TODO Code/Dev 
 
+## Using MenuLitComponent
 To use the MenuLitElement component in your code:
 
 1. Install MenuLitElement from Npm 
@@ -43,8 +45,8 @@ import { MenuLitElement} 'menu-lit-element';
 <menu-lit-element></menu-lit-element>
 ```
 
-TOO Angular
-TODO es5 and es6
+TODO Serve  
+TODO Framework support/Angular
 
 ## Setup MenuLitComponent
 
@@ -52,12 +54,11 @@ TODO
 * properties
 * events 
 
-## Known Issues and Limitations
+## Limitations
 
-* Submenus in submenus are not supported. This is by design as we don't consider nested submenus to be good UX.   
+* Submenus in submenus are not supported. 
 
 ## Acknowledgements
 
 * MenuLitElement is based on the application menu in [mxGraph](https://github.com/jgraph/mxgraph) and the accompanying [Graph Editor](https://jgraph.github.io/mxgraph/javascript/examples/grapheditor/www/index.html) example application.
-* The project structure is based on the [start-lit-element](https://github.com/PolymerLabs/start-lit-element) sample LitElement project.
-* This project is built with version 3.0 of the [Polymer CLI](https://polymer-library.polymer-project.org/3.0/docs/tools/polymer-cli).     
+ 
