@@ -1,30 +1,25 @@
 # menu-lit-element
 
- MenuLitComponent is an application menu web component. 
+ MenuLitComponent is an application menu component. 
  
  It is implemented as a [LitElement](https://lit-element.polymer-project.org/) and is configuration-driven and state-driven.
-
-* [Overview](#overview)
-* [Using MenuLitComponent](#using-menulitcomponent)
-* [Setup MenuLitComponent](#setup-menulitcomponent)
-* [Known Issues and Limitations](#known-issues-and-limitations)
-* [Acknowledgements](#acknowledgements)
 
 ## Overview
 
 TODO Gif 
 
+TODO Online Demo
+
 TODO features 
 * configuration-driven
 * state-driven
 * submenus
-* toggle items
 * shortcut text
-
-TODO Demo
-TODO Code/Dev 
+* menu functions
+* events
 
 ## Using MenuLitComponent
+
 To use the MenuLitElement component in your code:
 
 1. Install MenuLitElement from Npm 
@@ -45,10 +40,10 @@ import { MenuLitElement} 'menu-lit-element';
 <menu-lit-element></menu-lit-element>
 ```
 
-TODO Serve  
-TODO Framework support/Angular
+## Using MenuLitComponent in Angular
+TODO
 
-## Setup MenuLitComponent
+## Configure MenuLitComponent
 
 TODO
 * properties
@@ -57,6 +52,10 @@ TODO
 ## Limitations
 
 * Submenus in submenus are not supported. 
+
+## NPM
+
+TODO
 
 ## Acknowledgements
 

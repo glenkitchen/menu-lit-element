@@ -1,5 +1,6 @@
 import { LitElement, html, customElement, property } from 'lit-element';
-import { menuItem } from './lib/menu-item';
+import { menuItem } from './interfaces/menu-item';
+import { point } from './interfaces/point';
 
 @customElement('menu-lit-element')
 export class MenuLitElement extends LitElement {
@@ -74,7 +75,6 @@ export class MenuLitElement extends LitElement {
   }
 
   render() {
-
     return html`
         <style>
         :host {
@@ -224,9 +224,7 @@ export class MenuLitElement extends LitElement {
     if (!(this.currentMenuItem as any).disabled) {
         alert((this.currentMenuItem as any).textContent.trim());
         this.closeMenu();
-    }
-
-    
+    }    
   }
 
   menuItemMouseMove(event: MouseEvent) {

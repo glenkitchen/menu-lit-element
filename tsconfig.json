@@ -7,7 +7,7 @@
             "dom",
             "es2015"
         ],
-        "strict": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "strict": true        
     }
 }

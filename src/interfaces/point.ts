@@ -1,4 +1,4 @@
-interface point {
+export interface point {
     x: number,
     y: number
 } 
