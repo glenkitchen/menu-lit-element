@@ -4,7 +4,7 @@
  
  It is implemented as a [LitElement](https://lit-element.polymer-project.org/).
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/glenkitchen/menu-lit-element/blob/master/menu-lit-element.gif "Application menu")
 
 ## Using MenuLitComponent
 
