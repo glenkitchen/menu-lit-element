@@ -9,10 +9,7 @@
   "extraDependencies": [
     "node_modules/@webcomponents/webcomponentsjs/**"
   ],
-  "builds": [
-    {
-      "preset": "es5-bundled" 
-    },
+  "builds": [   
     {
       "preset": "es6-bundled"        
     }
