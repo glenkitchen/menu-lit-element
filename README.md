@@ -71,6 +71,5 @@ import { MenuLitElement} 'menu-lit-element';
 ## Acknowledgements
 
 * MenuLitElement is based on the application menu in [mxGraph](https://github.com/jgraph/mxgraph) and the accompanying [Graph Editor](https://jgraph.github.io/mxgraph/javascript/examples/grapheditor/www/index.html) example application.
-* The project structure is based on the PolymerLabs  
- [LitElement starter project](https://github.com/PolymerLabs/start-lit-element)  
+* The project structure is based on the PolymerLabs [LitElement starter project](https://github.com/PolymerLabs/start-lit-element)  
  
