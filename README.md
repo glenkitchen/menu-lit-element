@@ -73,12 +73,4 @@ import { MenuLitElement} 'menu-lit-element';
 * MenuLitElement is based on the application menu in [mxGraph](https://github.com/jgraph/mxgraph) and the accompanying [Graph Editor](https://jgraph.github.io/mxgraph/javascript/examples/grapheditor/www/index.html) example application.
 * The project structure is based on the PolymerLabs [LitElement starter project](https://github.com/PolymerLabs/start-lit-element)  
 
-Assembly
-Diagram Editor. Code has been copied from mxGraph and the accompanying Graph Editor example application, with some significant changes:
-
-Removed legacy fetatures. For example Internet Explorer specific code.
-Removed redundant code.
-Added TypeScript support.
-Very much a learning exercise with a very long-term view to a commercial application!
-
 https://github.com/glenkitchen/assembly
